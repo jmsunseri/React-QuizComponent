@@ -6,11 +6,11 @@ class QuizQuestion extends Component {
     super();
   }
 
-  handleClick = buttonText => {
+  handleClick(buttonText) {
     if (this.props.quiz_question.answer === buttonText) {
       this.props.showNextQuestionHandler();
     }
-  };
+  }
 
   render() {
     return (
@@ -25,7 +25,7 @@ class QuizQuestion extends Component {
                 <QuizQuestionButton
                   key={index}
                   button_text={element}
-                  clickHandler={this.handleClick}
+                  clickHandler={this.handleClick.bind(this)}
                 ></QuizQuestionButton>
               );
             })}
