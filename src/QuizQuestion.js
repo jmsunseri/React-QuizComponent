@@ -20,7 +20,6 @@ class QuizQuestion extends Component {
             <QuizQuestionButton
               button_text={this.state.quizQuestion.answer_options[0]}
             ></QuizQuestionButton>
-            <li>{}</li>
           </ul>
         </section>
       </main>
